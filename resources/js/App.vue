@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="text-center" style="margin: 20px 0px 20px 0px;">
-            <img src="logotype.min.svg"><br>
+			<img :src="image_src" ><br/>
             <span class="text-secondary">DEMO by Nazri</span>
         </div>
 
@@ -33,6 +33,7 @@ export default {
     name: "App",
     data() {
         return {
+			image_src: '/logotype.min.svg',
             isLoggedIn: false,
         }
     },

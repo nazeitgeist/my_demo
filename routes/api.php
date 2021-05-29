@@ -5,6 +5,8 @@ use App\Http\Controllers\API\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('login', [UserController::class, 'login']);
+Route::post('forgotPassword', [UserController::class, 'forgotPassword']);
+Route::post('submitResetPasswordForm', [UserController::class, 'submitResetPasswordForm']);
 Route::post('register', [UserController::class, 'register']);
 Route::post('logout', [UserController::class, 'logout'])->middleware('auth:sanctum');
 

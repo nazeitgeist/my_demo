@@ -85,9 +85,9 @@ export default {
 		},
 		deleteDeveloperMultiple() {
             this.$axios.get('/sanctum/csrf-cookie').then(response => {
-                this.$axios.post('/api/developers/deleteMultitple', { checked: this.checked, aa: this.developers })
+                this.$axios.post('/api/developers/deleteMultitple', { checked: this.checked })
                     .then(response => {
-						console.log("sss", this.developers);
+						//console.log("sss", this.developers);
 						this.checked.forEach( element => {
 							let i = this.developers.map(item => item.id).indexOf(element);
 							this.developers.splice(i, 1);

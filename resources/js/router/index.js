@@ -4,6 +4,8 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Register from '../pages/Register';
 import Login from '../pages/Login';
+import ResetPassword from '../pages/ResetPassword';
+import ResetPasswordForm from '../pages/ResetPasswordForm';
 import Dashboard from '../pages/Dashboard';
 
 import Developers from '../components/Developers';
@@ -31,6 +33,19 @@ export const routes = [
         path: '/login',
         component: Login
     },
+	{
+        name: 'reset',
+        path: '/reset',
+        component: ResetPassword
+    },
+	{ 
+		name: 'reset-password-form', 
+		path: '/reset-password/:token', 
+		component: ResetPasswordForm, 
+		meta: { 
+		  auth:false 
+		} 
+	},
     {
         name: 'dashboard',
         path: '/dashboard',
